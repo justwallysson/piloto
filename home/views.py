@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Create your views here.
 from django.shortcuts import render, HttpResponse
 
@@ -24,3 +25,19 @@ def contato (request):
 
 def ajuda (request):
     return render (request, 'ajuda.html')
+=======
+# Create your views here.
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("A view index funcionou, Wow!")
+
+def sobre(request):
+    return HttpResponse("<h1>Sistema 1.0 desenvolvido por mim<h1>")
+
+def contato(request):
+    return HttpResponse("Esssa é a página de contato")
+
+def ajuda(request):
+    return HttpResponse("Essa é a pagina de ajuda")
+>>>>>>> 2198066dddf65c0383a617d284299bc1a32b7290
