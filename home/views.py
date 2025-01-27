@@ -24,3 +24,7 @@ def contato (request):
 
 def ajuda (request):
     return render (request, 'ajuda.html')
+
+def local (request):
+    return render (request, 'local.html')
+
