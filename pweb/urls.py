@@ -26,6 +26,7 @@ urlpatterns = [
     path('ajuda', views.ajuda, name='ajuda'),
     path('local', views.local, name='local'),
     path('exibiritem/<int:id>', views.exibiritem,name='exibiritem'),
-    
+    path('dados/', views.dados, name='dados'),
+    path('form/', views.form, name='form'),
 ]
 

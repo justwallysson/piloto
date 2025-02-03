@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Formulário {% endblock  %}
+
+
+{% block conteudo %}  
+
+
+<form method="post">
+    {% csrf_token %}
+   <p> 
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" class="form-control"  name="nome" required>
+   </p>
+
+
+   <p>
+    <label for="idade">Idade:</label>
+    <input type="text" id="idade" class="form-control" name="idade" required>
+    </p>
+
+
+    <p>
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" class="form-control" name="cidade" required>    
+   </p>
+
+
+    <button type="submit" class="btn btn-primary btn-sm" >Enviar</button>
+</form>
+
+{% endblock  %}
