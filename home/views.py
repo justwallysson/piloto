@@ -1,6 +1,8 @@
 # Create your views here.
 from django.shortcuts import render, HttpResponse
 
+
+
 LISTA_ALUNOS = [
     {"nome": "João Silva", "matricula": "202301", "curso": "Técnico em Informática", "data_nascimento": "20/01/2008" , "turma": "208"},
     {"nome": "Maria Oliveira", "matricula": "202302", "curso": "Técnico em Informática", "data_nascimento": "20/01/2008", "turma": "208"},
@@ -66,6 +68,9 @@ def listar_alunos(request):
         'lista': LISTA_ALUNOS,
     }
     return render(request, 'listar_alunos.html', context)
+
+
+from django.shortcuts import redirect
 
 def editar_aluno(request, indice):
     aluno = LISTA_ALUNOS[indice]  # Obtém a referência do aluno na lista

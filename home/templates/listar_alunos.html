@@ -30,8 +30,8 @@
           <td> {{item.data_nascimento}} </td>
           <td> {{item.turma}} </td>          
           <td> 
-              <button onclick="location='#'"  class="btn btn-warning">Alterar </button>
-              <a href="#" class="btn btn-danger" 
+            <button onclick="location='{% url 'editar_aluno' forloop.counter0 %}'" class="btn btn-warning">Alterar</button>
+              <a href="{% url 'remover_aluno' forloop.counter0 %}" class="btn btn-danger" 
               onclick="return confirm('Tem certeza que deseja remover este registro?');">Excluir</a>
           </td> 
       </tr>
